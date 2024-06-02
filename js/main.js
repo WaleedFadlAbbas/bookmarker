@@ -28,12 +28,14 @@ function addSites() {
 }
 
 function submit() {
+    let i
     if (siteName.classList.contains("is-valid") &&
         siteUrl.classList.contains("is-valid")) {
         displaySites()
     }
     else {
         alert('please enter valid inputs')
+        allSites.splice(i, 1)
     }
 }
 
