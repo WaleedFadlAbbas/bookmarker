@@ -1,0 +1,112 @@
+:root {
+    --mainFont: "Pacifico", cursive;
+    --secFont: "Righteous", sans-serif;
+    --primaryColor: #f7ecde;
+    --black: #000;
+    --bgForText: linear-gradient(to right, #3ca55c, #baaf33);
+    --btnBg: #d1512d;
+    --btnBgHover: #bb4120;
+}
+
+.darkMode {
+    --primaryColor: #000106;
+    --black: #fff;
+    --bgForText: linear-gradient(to right, #71b786, #f7e22b);
+    --btnBg: #3ca55c;
+    --btnBgHover: #b5ac49;
+}
+
+body {
+    background-color: var(--primaryColor);
+}
+
+.header {
+    background-color: var(--primaryColor);
+    min-height: 100vh;
+
+    .container {
+        border-bottom: dotted;
+        border-color: var(--black);
+    }
+
+    h1 {
+        font-family: var(--mainFont);
+        color: var(--black);
+        position: relative;
+        z-index: 5;
+
+    }
+
+    h1:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 25%;
+        z-index: -1;
+        bottom: 0px;
+        background-color: #fec260;
+        transition-duration: 0.5s;
+    }
+
+    h1:hover:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        z-index: -1;
+        bottom: 0px;
+        background-color: #fec260;
+        transition-duration: 0.5s;
+    }
+
+    #bulb {
+        color: var(--black);
+        cursor: pointer;
+    }
+
+    #secondContainer {
+        h2 {
+            font-family: var(--secFont);
+            background-image: var(--bgForText);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        label {
+            color: var(--black);
+        }
+
+        button {
+            background-color: var(--btnBg);
+            transition-duration: 0.5s;
+            color: #fff;
+
+            &:hover {
+                background-color: var(--btnBgHover);
+                transition-duration: 0.5s;
+                color: #fff;
+
+            }
+        }
+    }
+
+    #thirdContainer {
+        border-bottom: none;
+
+        th {
+            font-family: var(--secFont);
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        td {
+            a {
+                text-decoration: none;
+                color: #fff;
+            }
+        }
+
+    }
+
+}

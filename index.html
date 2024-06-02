@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' href='css/index.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bungee+Spice&family=Macondo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bungee+Spice&family=Macondo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Righteous&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Varela+Round&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/01bed91f64.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container d-grid ">
+            <div class="title d-flex mx-auto my-4 ">
+                <h1 class="text-uppercase">bookmarker</h1>
+                <i class="fa-solid fa-lightbulb align-self-center mx-4 fs-4" id="bulb" onclick=" darkMode()"></i>
+            </div>
+        </div>
+
+        <div class="container my-4" id="secondContainer">
+            <h2 class="text-center"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+                    class="fa-solid fa-bookmark"></i></h2>
+
+            <label for="siteName" class="fs-5 text-capitalize"><i class="fa-solid fa-book-bookmark"></i>
+                sitename</label>
+            <input type="text" id="siteName" oninput="validateInput(this)" class="form-control ">
+            <p class="alert alert-danger lead visually-hidden mt-1 py-1">your website should contain atleast 3
+                letters</p>
+
+            <label for="siteUrl" class="fs-5 text-capitalize mt-3"><i class="fa-solid fa-link"></i>
+                site url</label>
+            <input type="text" id="siteUrl" class="form-control " oninput="validateInput(this)">
+            <p class="alert alert-danger lead visually-hidden mt-1 py-1">please enter valid url</p>
+
+            <button class="btn px-5 mx-auto d-block my-3" onclick="addSites()">submit</button>
+        </div>
+
+        <div class="container my-3" id="thirdContainer">
+            <table class="bg-light w-100 rounded-2 shadow" id="tableOfContents">
+                <thead>
+                    <tr class="">
+                        <th class="text-capitalize col-3 text-center">index</th>
+
+                        <th class="text-capitalize col-3 text-center">website name</th>
+
+                        <th class="text-capitalize col-3 text-center">visit</th>
+
+                        <th class="text-capitalize col-3 text-center">delete</th>
+                    </tr>
+                </thead>
+
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src='js/bootstrap.bundle.min.js'></script>
+    <script src='js/main.js'></script>
+</body>
+
+</html>
